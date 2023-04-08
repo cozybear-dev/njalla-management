@@ -13,6 +13,7 @@ resource "njalla_record_a" "tor_nodes" {
     node10   = "185.17.0.55"
     node11   = "89.185.85.140"
     node12   = "77.91.78.210"
+    node13   = "45.141.215.203"
   }
   domain  = "shadowbrokers.eu"
   name    = "tor.${each.key}"
