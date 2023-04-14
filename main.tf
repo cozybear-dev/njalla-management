@@ -14,6 +14,7 @@ resource "njalla_record_a" "tor_nodes" {
     node11   = "89.185.85.140"
     node12   = "77.91.78.210"
     node13   = "45.138.16.231"
+    node14   = "185.17.0.150"
   }
   domain  = "shadowbrokers.eu"
   name    = "tor.${each.key}"
@@ -62,9 +63,10 @@ resource "njalla_record_txt" "tor_nodes" {
     node11   = "F59D3D313A027703E51DC7DF793F2ED106C2E372"
     node12   = "014326416058DCFD0965167026CBEF647409A000"
     node13   = "BC2CB6453522AA289DB3D0BDEB93CBF46E5DD9DF"
+    node14   = "41C7B20EF44FFBB44DE72A748989B18C13FAAD1E"
   }
   domain  = "shadowbrokers.eu"
-  name    = "${each.value}"
+  name    = lower("${each.value}")
   ttl     = 10800 #3h
   content = "we-run-this-tor-relay"
 }
