@@ -1,1 +1,1 @@
-provider njalla {}
+provider "njalla" {}
