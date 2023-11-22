@@ -26,6 +26,7 @@ resource "njalla_record_a" "tor_nodes" {
     node23 = "5.42.80.234"
     node24 = "5.42.80.232"
     node25 = "185.174.136.114"
+    node26 = "5.182.86.212"
   }
   domain  = "shadowbrokers.eu"
   name    = "tor.${each.key}"
@@ -35,8 +36,7 @@ resource "njalla_record_a" "tor_nodes" {
 
 resource "njalla_record_a" "short_ttl_tor_nodes" {
   for_each = {
-    # testnode  = "94.228.169.70"
-    # testnode2 = "79.137.195.103"
+    # temp  = "5.42.66.6"
   }
   domain  = "shadowbrokers.eu"
   name    = "tor.${each.key}"
@@ -72,6 +72,7 @@ resource "njalla_record_aaaa" "tor_nodes" {
     node23 = "2a12:5940:b4dd::2"
     node24 = "2a12:5940:b4db::2"
     node25 = "2a12:5940:d2f6::2"
+    node26 = "2a12:5940:144f::2"
   }
   domain  = "shadowbrokers.eu"
   name    = "tor.${each.key}"
@@ -107,6 +108,7 @@ resource "njalla_record_txt" "tor_nodes" {
     node23 = "2A134CF4E3CC5C7F77F331177791843794B96068"
     node24 = "3EBDF7359190ACC0E23E5BA3B9C046668DF85114"
     node25 = "8F013AB2708FB36FA5F9594DC97701E64545ADEF"
+    node26 = "8B31226353E33A49D43A0140F05AA056337E8578"
     # testnode = "CC9D61687AB0386D0AD64BB2C1808AFDC22BAB11"
   }
   domain  = "shadowbrokers.eu"
