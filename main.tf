@@ -10,7 +10,7 @@ resource "njalla_record_a" "tor_nodes" {
     node7  = "79.137.202.92"
     node8  = "77.91.86.95"
     node9  = "45.15.157.177"
-    node10 = "79.137.195.103"
+    node10 = "91.103.253.141"
     node11 = "89.185.85.140"
     node12 = "5.42.66.6"
     node13 = "77.91.87.79"
@@ -33,6 +33,7 @@ resource "njalla_record_a" "tor_nodes" {
     node30 = "84.54.51.61"
     node31 = "84.54.51.69"
     node32 = "84.54.51.68"
+    node33 = "46.226.164.14"
   }
   domain  = "shadowbrokers.eu"
   name    = "tor.${each.key}"
@@ -125,9 +126,20 @@ resource "njalla_record_txt" "tor_nodes" {
     node30 = "E9EA2D5287B668498026E07289482E3FD50C1047"
     node31 = "5B0BFE295F857E47D7C2A420260A9E1A61B0044F"
     node32 = "7B1E489F721DF140436AA42BD513DFB3BD40DF5E"
+    node33 = "C80CC578B912CEDFCD8250296341FDDC44B2DD18"
   }
   domain  = "shadowbrokers.eu"
   name    = lower("${each.value}")
   ttl     = 10800 #3h
   content = "we-run-this-tor-relay"
+}
+
+resource "njalla_record_txt" "redirects" {
+  for_each = {
+    hk  = "shadowbrokers.hk"
+  }
+  domain  = "shadowbrokers.eu"
+  name    = lower("${each.value}")
+  ttl     = 10800 #3h
+  content = "we-run-this-domain"
 }
