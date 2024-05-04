@@ -1,12 +1,12 @@
 #A records
 resource "njalla_record_a" "tor_nodes" {
   for_each = {
-    node1  = "23.137.249.8"
+    node1  = "77.221.159.189"
     node2  = "77.91.85.147"
-    node3  = "23.184.48.127"
-    node4  = "23.184.48.128"
-    node5  = "23.137.249.143"
-    node6  = "23.137.249.185"
+    node3  = "77.221.159.184"
+    node4  = "77.221.159.193"
+    node5  = "77.221.159.192"
+    node6  = "77.221.159.75"
     node7  = "79.137.202.92"
     node8  = "77.91.86.95"
     node9  = "45.15.157.177"
@@ -29,7 +29,7 @@ resource "njalla_record_a" "tor_nodes" {
     node26 = "5.182.86.212"
     node27 = "84.54.51.64"
     node28 = "194.87.31.104"
-    node29 = "194.48.250.55"
+    node29 = "77.221.157.237"
     node30 = "84.54.51.61"
     node31 = "84.54.51.69"
     node32 = "84.54.51.68"
@@ -43,7 +43,7 @@ resource "njalla_record_a" "tor_nodes" {
 
 resource "njalla_record_a" "short_ttl_tor_nodes" {
   for_each = {
-    # testing3 = "194.87.31.104"
+    # yalla = "77.221.157.237"
   }
   domain  = "shadowbrokers.eu"
   name    = "tor.${each.key}"
@@ -54,12 +54,12 @@ resource "njalla_record_a" "short_ttl_tor_nodes" {
 #AAAA records
 resource "njalla_record_aaaa" "tor_nodes" {
   for_each = {
-    node1  = "2602:fc24:11:aabe::1"
+    # node1  = "2602:fc24:11:aabe::1"
     # node2  = "2a0e:d602:2:137::2"
-    node3  = "2602:fc24:18:1be9::1"
-    node4  = "2602:fc24:18:1c54::1"
-    node5  = "2602:fc24:11:4441::1"
-    node6  = "2602:fc24:11:96f9::1"
+    # node3  = "2602:fc24:18:1be9::1"
+    # node4  = "2602:fc24:18:1c54::1"
+    # node5  = "2602:fc24:11:4441::1"
+    # node6  = "2602:fc24:11:96f9::1"
     # node7  = "2a12:5940:90f0::2"
     node8  = "2a0e:d602:2:2a2::2"
     node9  = "2a12:5940:f0a8::2"
@@ -94,12 +94,12 @@ resource "njalla_record_aaaa" "tor_nodes" {
 #TXT records
 resource "njalla_record_txt" "tor_nodes" {
   for_each = {
-    node1  = "A6CD6A3242549DF63E57FF00FF89BD899D2AEF8A"
+    node1  = "ED3F06DC5FFD8EBC732920E8F044B132AE6C3B80"
     node2  = "C7A51E46740C15DEC0535AF5560A1919CE6E5758"
-    node3  = "1B57F14DE71E218DA3D9243A6497F26196355357"
-    node4  = "B0ABBC964E763C01E93AF5719B77023728A78181"
-    node5  = "53A5C88DF5862DC3FF8BB938926C094879FAA806"
-    node6  = "A551E17288938C9FFF08F2F52B058AD4D0FC3A49"
+    node3  = "DFDAF22D0F96265C5A1FB0C319ECD4D532339DE8"
+    node4  = "D69801BF161F4A15D45B78ED02C48DBE9993CFC1"
+    node5  = "9CD8AC434F90DC1AA7E18D019A34ACEB218E9EA5"
+    node6  = "616D768A421DD4E6F4BB55BBDCB5B5DE6E7E7079"
     node7  = "84FA05E6A80EBE36BD84A51705C467FA98188D4A"
     node8  = "034ED155E6DA8277BC7F294896BFD7013D7BD7B0"
     node9  = "DDF458ADF897A5EB0B894023C084B3C5B2F3B15B"
@@ -122,7 +122,7 @@ resource "njalla_record_txt" "tor_nodes" {
     node26 = "8B31226353E33A49D43A0140F05AA056337E8578"
     node28 = "D1D4115C77FD8C5F8BBD1CFA8F938F0143AE8E5B"
     node28 = "AA5C46F66CB5863FA379F18081F9BEDC130AD601"
-    node29 = "15C364DEF4D6A045D55F97FB3FB31EE8635AF780"
+    node29 = "B9C5243087CF69B6A57A8318B312B79F19D6D594"
     node30 = "E9EA2D5287B668498026E07289482E3FD50C1047"
     node31 = "5B0BFE295F857E47D7C2A420260A9E1A61B0044F"
     node32 = "7B1E489F721DF140436AA42BD513DFB3BD40DF5E"
