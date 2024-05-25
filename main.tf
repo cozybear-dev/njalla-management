@@ -20,12 +20,12 @@ resource "njalla_record_a" "tor_nodes" {
     node17 = "77.105.146.42"
     node18 = "77.73.70.167"
     node19 = "79.137.198.213"
-    node20 = "45.15.158.39"
+    # node20 = "45.15.158.39"
     node21 = "5.42.80.233"
     node22 = "5.42.80.235"
     node23 = "5.42.80.234"
     node24 = "5.42.80.232"
-    node25 = "185.174.136.114"
+    # node25 = "185.174.136.114"
     node26 = "5.182.86.212"
     node27 = "84.54.51.64"
     node28 = "194.87.31.104"
@@ -113,12 +113,12 @@ resource "njalla_record_txt" "tor_nodes" {
     node17 = "EBD7520D6CA3CD325ADE5C3C802A7DAFA0BA6C71"
     node18 = "A3BC09219C2351376412D8736C7CAEE4A1639E3B"
     node19 = "2AB6D4CE7A4D46ADA4F21C537A05A68DE088280B"
-    node20 = "EE50AAEA83AA7EDAF0A35E4E8EA4976483ABCCDD"
+    # node20 = "EE50AAEA83AA7EDAF0A35E4E8EA4976483ABCCDD"
     node21 = "5EAA3069C8655BD6396F313BAD59E779B347C53C"
     node22 = "FC8AD114F816FB8CF20D19E4E5AFFD0D6780F3DF"
     node23 = "2A134CF4E3CC5C7F77F331177791843794B96068"
     node24 = "3EBDF7359190ACC0E23E5BA3B9C046668DF85114"
-    node25 = "8F013AB2708FB36FA5F9594DC97701E64545ADEF"
+    # node25 = "8F013AB2708FB36FA5F9594DC97701E64545ADEF"
     node26 = "8B31226353E33A49D43A0140F05AA056337E8578"
     node28 = "D1D4115C77FD8C5F8BBD1CFA8F938F0143AE8E5B"
     node28 = "AA5C46F66CB5863FA379F18081F9BEDC130AD601"
@@ -136,7 +136,7 @@ resource "njalla_record_txt" "tor_nodes" {
 
 resource "njalla_record_txt" "redirects" {
   for_each = {
-    hk  = "shadowbrokers.hk"
+    hk = "shadowbrokers.hk"
   }
   domain  = "shadowbrokers.eu"
   name    = lower("${each.value}")
