@@ -27,12 +27,12 @@ resource "njalla_record_a" "tor_nodes" {
     node24 = "5.42.80.232"
     # node25 = "185.174.136.114"
     node26 = "5.182.86.212"
-    node27 = "84.54.51.64"
+    node27 = "77.90.42.213"
     node28 = "194.87.31.104"
     node29 = "77.221.157.237"
-    node30 = "84.54.51.61"
-    node31 = "84.54.51.69"
-    node32 = "84.54.51.68"
+    node30 = "77.90.42.201"
+    node31 = "77.90.42.235"
+    node32 = "77.90.42.236"
     node33 = "77.221.152.105"
   }
   domain  = "shadowbrokers.eu"
@@ -43,7 +43,10 @@ resource "njalla_record_a" "tor_nodes" {
 
 resource "njalla_record_a" "short_ttl_tor_nodes" {
   for_each = {
-    tempo = "217.197.107.138"
+    # pffuck1 = "77.90.42.213"
+    # pffuck2 = "77.90.42.201"
+    # pffuck3 = "77.90.42.235"
+    # pffuck4 = "77.90.42.236"
   }
   domain  = "shadowbrokers.eu"
   name    = "tor.${each.key}"
