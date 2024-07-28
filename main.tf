@@ -12,7 +12,7 @@ resource "njalla_record_a" "tor_nodes" {
     node9  = "45.15.157.177"
     node10 = "91.103.253.141"
     node11 = "89.185.85.140"
-    node12 = "77.105.133.7"
+    node12 = "217.197.107.138"
     node13 = "77.91.87.79"
     node14 = "94.228.169.70"
     node15 = "185.106.94.195"
@@ -33,7 +33,7 @@ resource "njalla_record_a" "tor_nodes" {
     node30 = "84.54.51.61"
     node31 = "84.54.51.69"
     node32 = "84.54.51.68"
-    node33 = "46.226.164.14"
+    node33 = "77.221.152.105"
   }
   domain  = "shadowbrokers.eu"
   name    = "tor.${each.key}"
@@ -43,7 +43,7 @@ resource "njalla_record_a" "tor_nodes" {
 
 resource "njalla_record_a" "short_ttl_tor_nodes" {
   for_each = {
-    # yalla = "77.221.157.237"
+    tempo = "217.197.107.138"
   }
   domain  = "shadowbrokers.eu"
   name    = "tor.${each.key}"
@@ -126,7 +126,7 @@ resource "njalla_record_txt" "tor_nodes" {
     node30 = "D04FE78152A06AEAF950A2E58A11E9739B291C0A"
     node31 = "31DEA0877BE529EF6716ECD22527A63B156C34E8"
     node32 = "A4A98B4E4EBBAADE5C8226D041555E82B59342F3"
-    node33 = "C80CC578B912CEDFCD8250296341FDDC44B2DD18"
+    # node33 = ""
   }
   domain  = "shadowbrokers.eu"
   name    = lower("${each.value}")
