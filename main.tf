@@ -1,39 +1,33 @@
 #A records
 resource "njalla_record_a" "tor_nodes" {
   for_each = {
-    node1  = "77.221.159.189"
-    node2  = "77.91.85.147"
-    node3  = "77.221.159.184"
-    node4  = "77.221.159.193"
-    node5  = "77.221.159.192"
-    node6  = "77.221.159.75"
-    node7  = "79.137.202.92"
-    node8  = "77.91.86.95"
-    node9  = "150.241.92.201"
-    node10 = "91.103.253.141"
-    node11 = "89.185.85.140"
-    node12 = "217.197.107.138"
-    node13 = "77.91.87.79"
-    node14 = "94.228.169.70"
-    node15 = "185.106.94.195"
-    node16 = "77.73.69.128"
-    node17 = "77.105.146.42"
-    node18 = "77.73.70.167"
-    node19 = "79.137.198.213"
-    # node20 = "45.15.158.39"
-    node21 = "91.186.218.172"
-    node22 = "91.186.218.245"
-    node23 = "91.186.218.181"
-    node24 = "91.186.218.105"
-    # node25 = "185.174.136.114"
-    node26 = "5.182.86.212"
-    node27 = "156.229.232.108"
-    node28 = "194.87.31.104"
-    node29 = "77.221.157.237"
-    node30 = "156.229.232.115"
-    node31 = "156.229.232.98"
-    node32 = "156.229.232.104"
-    node33 = "77.221.152.105"
+    node1  = "176.65.149.100"
+    node2  = "176.65.149.88"
+    node3  = "176.65.149.84"
+    node4  = "176.65.149.87"
+    node5  = "194.87.31.104"
+    node6  = "77.73.69.128"
+    node7  = "77.73.70.167"
+    node8  = "45.90.185.100"
+    node9  = "45.90.185.101"
+    node10 = "45.90.185.102"
+    node11 = "45.90.185.103"
+    node12 = "45.90.185.104"
+    node13 = "45.90.185.105"
+    node14 = "45.90.185.106"
+    node15 = "45.90.185.107"
+    node16 = "45.90.185.108"
+    node17 = "45.90.185.109"
+    node18 = "45.90.185.110"
+    node19 = "45.90.185.111"
+    node20 = "45.90.185.112"
+    node21 = "45.90.185.113"
+    node22 = "45.90.185.114"
+    node23 = "45.90.185.115"
+    node24 = "45.90.185.116"
+    node25 = "45.90.185.117"
+    node26 = "45.90.185.118"
+    node27 = "45.90.185.119"
   }
   domain  = "shadowbrokers.eu"
   name    = "tor.${each.key}"
@@ -41,52 +35,29 @@ resource "njalla_record_a" "tor_nodes" {
   content = each.value
 }
 
-resource "njalla_record_a" "short_ttl_tor_nodes" {
-  for_each = {
-    pffuck1 = "154.213.185.133"
-    pffuck2 = "154.213.185.165"
-    pffuck3 = "154.213.185.185"
-    pffuck4 = "154.213.185.183"
-  }
-  domain  = "shadowbrokers.eu"
-  name    = "tor.${each.key}"
-  ttl     = 300 #5m
-  content = each.value
-}
+# resource "njalla_record_a" "short_ttl_tor_nodes" {
+#   for_each = {
+#     pffuck1 = "154.213.185.133"
+#     pffuck2 = "154.213.185.165"
+#     pffuck3 = "154.213.185.185"
+#     pffuck4 = "154.213.185.183"
+#   }
+#   domain  = "shadowbrokers.eu"
+#   name    = "tor.${each.key}"
+#   ttl     = 300 #5m
+#   content = each.value
+# }
 
 #AAAA records
 resource "njalla_record_aaaa" "tor_nodes" {
   for_each = {
-    # node1  = "2602:fc24:11:aabe::1"
-    # node2  = "2a0e:d602:2:137::2"
-    # node3  = "2602:fc24:18:1be9::1"
-    # node4  = "2602:fc24:18:1c54::1"
-    # node5  = "2602:fc24:11:4441::1"
-    # node6  = "2602:fc24:11:96f9::1"
-    # node7  = "2a12:5940:90f0::2"
-    # node8  = "2a0e:d602:2:2a2::2"
-    node9  = "2a12:5940:f0a8::2"
-    node10 = "2a12:5940:13e2::2"
-    node11 = "2a12:5940:9101::2"
-    # node12 = "2a0e:d602:2:436::2"
-    # node13 = "2a0e:d602:2:55f::2"
-    node14 = "2a12:5940:52c2::2"
-    # node15 = "2a0e:d602:1:afd::2"
-    node16 = "2a00:1838:37:52::da4e"
-    # node17 = "2a0e:d602:1:14bc::2"
-    node18 = "2a00:1838:37:468::98b4"
-    # node19 = "2a12:5940:10cf::2"
-    # node20 = "2a12:5940:d295::2"
-    # node21 = "2a12:5940:b4dc::2"
-    # node22 = "2a12:5940:b4de::2"
-    # node23 = "2a12:5940:b4dd::2"
-    # node24 = "2a12:5940:b4db::2"
-    # node25 = "2a12:5940:d2f6::2"
-    node26 = "2a12:5940:144f::2"
-    node27 = "2a05:b0c7:6388::1"
-    node30 = "2a05:b0c7:6949::1"
-    node31 = "2a05:b0c7:6bd4::1"
-    node32 = "2a05:b0c7:67c6::1"
+    node1 = "2a05:b0c7:67c6::1"
+    node2 = "2a05:b0c7:6949::1"
+    node3 = "2a05:b0c7:6bd4::1"
+    node4 = "2a05:b0c7:6388::1"
+    # node5 = ""
+    node6 = "2a00:1838:37:52::da4e"
+    node7 = "2a00:1838:37:468::98b4"
   }
   domain  = "shadowbrokers.eu"
   name    = "tor.${each.key}"
@@ -97,39 +68,33 @@ resource "njalla_record_aaaa" "tor_nodes" {
 #TXT records
 resource "njalla_record_txt" "tor_nodes" {
   for_each = {
-    node1  = "ED3F06DC5FFD8EBC732920E8F044B132AE6C3B80"
-    node2  = "C7A51E46740C15DEC0535AF5560A1919CE6E5758"
-    node3  = "DFDAF22D0F96265C5A1FB0C319ECD4D532339DE8"
-    node4  = "D69801BF161F4A15D45B78ED02C48DBE9993CFC1"
-    node5  = "9CD8AC434F90DC1AA7E18D019A34ACEB218E9EA5"
-    node6  = "616D768A421DD4E6F4BB55BBDCB5B5DE6E7E7079"
-    node7  = "84FA05E6A80EBE36BD84A51705C467FA98188D4A"
-    node8  = "034ED155E6DA8277BC7F294896BFD7013D7BD7B0"
-    node9  = "DDF458ADF897A5EB0B894023C084B3C5B2F3B15B"
-    node10 = "3B432139835ADDA359F09AC63D65A86360EFD409"
-    node11 = "F59D3D313A027703E51DC7DF793F2ED106C2E372"
-    node12 = "014326416058DCFD0965167026CBEF647409A000"
-    node13 = "2F76402F04EE7AC80207A4B3B525B235673952AE"
-    node14 = "63A976C6BE797BDFE0E367D1910A381F0E0C0891"
-    node15 = "B829A49405A9DA5BD2E199F6E83E638CA233BC3C"
-    node16 = "AC7BDB39F81C4B364EA50B12B51C77C7A131EA7C"
-    node17 = "EBD7520D6CA3CD325ADE5C3C802A7DAFA0BA6C71"
-    node18 = "A3BC09219C2351376412D8736C7CAEE4A1639E3B"
-    node19 = "2AB6D4CE7A4D46ADA4F21C537A05A68DE088280B"
-    # node20 = "EE50AAEA83AA7EDAF0A35E4E8EA4976483ABCCDD"
-    node21 = "5EAA3069C8655BD6396F313BAD59E779B347C53C"
-    node22 = "FC8AD114F816FB8CF20D19E4E5AFFD0D6780F3DF"
-    node23 = "2A134CF4E3CC5C7F77F331177791843794B96068"
-    node24 = "3EBDF7359190ACC0E23E5BA3B9C046668DF85114"
-    # node25 = "8F013AB2708FB36FA5F9594DC97701E64545ADEF"
-    node26 = "8B31226353E33A49D43A0140F05AA056337E8578"
-    node27 = "7CF3BFD0DE5AD3772CB9D293BF9251813296924C"
-    node28 = "AA5C46F66CB5863FA379F18081F9BEDC130AD601"
-    node29 = "B9C5243087CF69B6A57A8318B312B79F19D6D594"
-    node30 = "D04FE78152A06AEAF950A2E58A11E9739B291C0A"
-    node31 = "31DEA0877BE529EF6716ECD22527A63B156C34E8"
-    node32 = "A4A98B4E4EBBAADE5C8226D041555E82B59342F3"
-    # node33 = ""
+    node1  = "A4A98B4E4EBBAADE5C8226D041555E82B59342F3"
+    node2  = "D04FE78152A06AEAF950A2E58A11E9739B291C0A"
+    node3  = "31DEA0877BE529EF6716ECD22527A63B156C34E8"
+    node4  = "7CF3BFD0DE5AD3772CB9D293BF9251813296924C"
+    node5  = "AA5C46F66CB5863FA379F18081F9BEDC130AD601"
+    node6  = "AC7BDB39F81C4B364EA50B12B51C77C7A131EA7C"
+    node7  = "A3BC09219C2351376412D8736C7CAEE4A1639E3B"
+    node8  = "A34EBDC33940A61B72B278B61006B018FA749470"
+    node9  = "AD9ADD5135343F013423F7528AE3F753B41E51EA"
+    node10 = "6B56DCB302DA4BC5F468A7D81FDD606A3DF259D6"
+    node11 = "B78D6028A8B4E964D0D5846C719E318FCF78298B"
+    node12 = "A6A650449C729D57C24C99C8ACA2090243F3172C"
+    node13 = "098DFDB1F0F191DDD5957F67B220EFA6FC2FC1BF"
+    node14 = "B06C636CC268AC2BCBEEF4261C72A5111A88E422"
+    node15 = "7D524A203780608CC486D83EE944A89909FEC1F8"
+    node16 = "EDAE2F5BBB9937D3398AF849EFDD35805FA44905"
+    node17 = "DF521A2AC8BBA6B303EAE1784BCA17D2C0EDA8F2"
+    node18 = "17E21333C2BA4403F5E7CC0CDA28D2C89D339CAF"
+    node19 = "1836BDFA47F04DA820AD36409D4D7A8713DEE93E"
+    node20 = "C7EC5E64B545E403C0322A26C18CDBBC30EE3E37"
+    node21 = "989C21F9D7B9FE3C3CE293C2DDA41C72F555D407"
+    node22 = "D649FDA547419792469EBF9F7D6DF0A1E4E50ECC"
+    node23 = "C02E3262F8D674F494EAA97A0E86DE712C6F5A12"
+    node24 = "10D363AE74C4F30370F8ADE43241C8F17EC47CB5"
+    node25 = "5F152ED0F1EA7E631478FD218B115AD27FE90564"
+    node26 = "B95E6ABE7AD60D60CDA8F84E6B40C909DC6FBF45"
+    node27 = "4FE643714615BC290B2F7E568B5652D8C8825CF9"
   }
   domain  = "shadowbrokers.eu"
   name    = lower("${each.value}")
@@ -137,12 +102,12 @@ resource "njalla_record_txt" "tor_nodes" {
   content = "we-run-this-tor-relay"
 }
 
-resource "njalla_record_txt" "redirects" {
-  for_each = {
-    hk = "shadowbrokers.hk"
-  }
-  domain  = "shadowbrokers.eu"
-  name    = lower("${each.value}")
-  ttl     = 10800 #3h
-  content = "we-run-this-domain"
-}
+# resource "njalla_record_txt" "redirects" {
+#   for_each = {
+#     hk = "shadowbrokers.hk"
+#   }
+#   domain  = "shadowbrokers.eu"
+#   name    = lower("${each.value}")
+#   ttl     = 10800 #3h
+#   content = "we-run-this-domain"
+# }
