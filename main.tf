@@ -28,6 +28,11 @@ resource "njalla_record_a" "tor_nodes" {
     node25 = "45.90.185.117"
     node26 = "45.90.185.118"
     node27 = "45.90.185.119"
+    node28 = "45.90.185.115"
+    node29 = "45.90.185.116"
+    node30 = "45.90.185.117"
+    node31 = "45.90.185.118"
+    node32 = "45.90.185.119"
   }
   domain  = "shadowbrokers.eu"
   name    = "tor.${each.key}"
